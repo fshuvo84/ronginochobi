@@ -1,0 +1,17 @@
+{
+  "name": "ftp-web-player",
+  "version": "1.0.0",
+  "description": "A simple web UI to browse, search and stream videos from an HTTP/FTP-style directory listing server.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

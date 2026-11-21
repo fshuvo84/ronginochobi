@@ -1,0 +1,16 @@
+services:
+  mediahub:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      FTP_BASE_URL: "http://172.16.50.4"
+      # FTP_USER: ""
+      # FTP_PASS: ""
+      SITE_NAME: "MediaHub"
+    volumes:
+      - mediahub-data:/app/data   # keeps the search index between restarts
+
+volumes:
+  mediahub-data:
